@@ -26,7 +26,7 @@ public class CharacterNavigationController : MonoBehaviour
         if (transform.position != destination)
         {
             Vector3 destinationDirection = destination - transform.position;
-            destinationDirection.y = 0;
+            //destinationDirection.y = 0;
 
             float destinationDistance = destinationDirection.magnitude;
 
