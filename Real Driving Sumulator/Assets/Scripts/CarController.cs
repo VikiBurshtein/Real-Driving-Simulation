@@ -45,6 +45,11 @@ public class CarController : MonoBehaviour
         isBreaking = Input.GetKey(KeyCode.Space);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        ScoreScript.scoreValue -= 1;
+    }
+
     private void HandleMotor()
     {
         frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
