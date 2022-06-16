@@ -135,13 +135,6 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "wizardscode.character": {
-      "version": "https://github.com/TheWizardsCode/Character-Unity-Package.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "ab03d82860e12a6255af2a744acf214f2f41f937"
-    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

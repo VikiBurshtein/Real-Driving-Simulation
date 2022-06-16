@@ -13,6 +13,17 @@ public class ResetGame : MonoBehaviour
         {
             Panel.SetActive(false);
         }
+        ScoreScript.ResetScore();
         SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1;
+    }
+
+    public void CloseWithoutReseting()
+    {
+        if (Panel != null)
+        {
+            Panel.SetActive(false);
+        }
+        Time.timeScale = 1;
     }
 }

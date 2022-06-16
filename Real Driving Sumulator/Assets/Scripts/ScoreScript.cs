@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-
-    public static int scoreValue = 100;
+    private static int scoreAtStart = 100;
+    public static int scoreValue = scoreAtStart;
     Text score;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,16 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "" + scoreValue;
+        score.text = scoreValue.ToString();
+    }
+
+    public static void ReduceScore(int amount)
+    {
+        scoreValue -= amount;
+    }
+
+    public static void ResetScore()
+    {
+        scoreValue = scoreAtStart;
     }
 }

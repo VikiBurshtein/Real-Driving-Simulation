@@ -2,6 +2,7 @@
 {
     using UnityEngine;
     using System.Collections.Generic;
+    using System.Threading;
 
     [HelpURL("https://simpletrafficsystem.turnthegameon.com/documentation/api/aitrafficlight")]
     public class AITrafficLight : MonoBehaviour
@@ -16,6 +17,9 @@
         public AITrafficWaypointRoute waypointRoute;
         [Tooltip("Array for multiple routes, cars can't exit assigned route if light is red or yellow.")]
         public List<AITrafficWaypointRoute> waypointRoutes;
+        public GameObject Panel;
+        public GameObject Score;
+
 
         public void EnableRedLight()
         {
@@ -53,5 +57,14 @@
             greenMesh.enabled = true;
         }
 
+        public void GetLightColor()
+        {
+            if ((!Panel.activeSelf) && redMesh.enabled)
+            {
+                ScoreScript.ReduceScore(10);
+                Panel.SetActive(true);
+                Time.timeScale = 0;
+            } 
+        }
     }
 }
