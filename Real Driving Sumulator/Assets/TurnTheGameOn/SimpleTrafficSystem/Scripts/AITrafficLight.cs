@@ -57,7 +57,7 @@
             greenMesh.enabled = true;
         }
 
-        public void GetLightColor()
+        public void AlertRedLightPass()
         {
             if ((!Panel.activeSelf) && redMesh.enabled)
             {

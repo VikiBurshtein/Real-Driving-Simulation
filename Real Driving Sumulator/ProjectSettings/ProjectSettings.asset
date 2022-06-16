@@ -591,6 +591,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     1: CiDy;SimpleTrafficSystem
+    7: CiDy;SimpleTrafficSystem
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
