@@ -7,7 +7,6 @@ public class StopSignScript : MonoBehaviour
     public GameObject Panel;
     public GameObject Score;
 
-
     public void AlertCarDidntStop()
     {
         if (!Panel.activeSelf)
