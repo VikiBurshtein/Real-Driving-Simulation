@@ -7,11 +7,11 @@ public class NoEntryScript : MonoBehaviour
     public GameObject Panel;
     public GameObject Score;
 
-    public void OnCollisionEnter(Collision collision)
+    public void AlertNoEntryPass()
     {
-        if (!Panel.activeSelf && collision.gameObject.CompareTag("Player"))
+        if (!Panel.activeSelf)
         {
-            ScoreScript.ReduceScore(9);
+            ScoreScript.ReduceScore(10);
             Panel.SetActive(true);
             Time.timeScale = 0;
         }
