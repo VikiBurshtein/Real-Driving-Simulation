@@ -98,7 +98,7 @@ public class CarController : MonoBehaviour
 
     public float getCarSpeed()
     {
-        return (int)speed;
+        return (int)speed*5;
     }
 }
 
