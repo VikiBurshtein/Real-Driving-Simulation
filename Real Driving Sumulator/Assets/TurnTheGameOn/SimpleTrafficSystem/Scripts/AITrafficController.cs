@@ -817,7 +817,7 @@
                     accelerationPowerNA = accelerationPowerNL,
                     frontSensorTransformPositionNA = frontSensorTransformPositionNL,
                 };
-                jobHandle = carAITrafficJob.Schedule(driveTargetTAA);
+                //jobHandle = carAITrafficJob.Schedule(driveTargetTAA);
                 jobHandle.Complete();
 
                 for (int i = 0; i < carCount; i++) // operate on results
@@ -1078,7 +1078,7 @@
                     carTransformPreviousPositionNA = carTransformPreviousPositionNL,
                     carTransformPositionNA = carTransformPositionNL,
                 };
-                jobHandle = carTransformpositionJob.Schedule(carTAA);
+                //jobHandle = carTransformpositionJob.Schedule(carTAA);
                 jobHandle.Complete();
 
                 frAITrafficCarWheelJob = new AITrafficCarWheelJob
@@ -1088,7 +1088,7 @@
                     wheelQuaternionNA = FRwheelRotationNL,
                     speedNA = speedNL,
                 };
-                jobHandle = frAITrafficCarWheelJob.Schedule(frontRightWheelTAA);
+                //jobHandle = frAITrafficCarWheelJob.Schedule(frontRightWheelTAA);
                 jobHandle.Complete();
 
                 flAITrafficCarWheelJob = new AITrafficCarWheelJob
@@ -1098,7 +1098,7 @@
                     wheelQuaternionNA = FLwheelRotationNL,
                     speedNA = speedNL,
                 };
-                jobHandle = flAITrafficCarWheelJob.Schedule(frontLeftWheelTAA);
+                //jobHandle = flAITrafficCarWheelJob.Schedule(frontLeftWheelTAA);
                 jobHandle.Complete();
 
                 brAITrafficCarWheelJob = new AITrafficCarWheelJob
@@ -1108,7 +1108,7 @@
                     wheelQuaternionNA = BRwheelRotationNL,
                     speedNA = speedNL,
                 };
-                jobHandle = brAITrafficCarWheelJob.Schedule(backRightWheelTAA);
+                //jobHandle = brAITrafficCarWheelJob.Schedule(backRightWheelTAA);
                 jobHandle.Complete();
 
                 blAITrafficCarWheelJob = new AITrafficCarWheelJob
@@ -1118,7 +1118,7 @@
                     wheelQuaternionNA = BLwheelRotationNL,
                     speedNA = speedNL,
                 };
-                jobHandle = blAITrafficCarWheelJob.Schedule(backLeftWheelTAA);
+                //jobHandle = blAITrafficCarWheelJob.Schedule(backLeftWheelTAA);
                 jobHandle.Complete();
 
                 if (usePooling)
@@ -1138,7 +1138,7 @@
                         spawnZone = spawnZone,
                         isDisabledNA = isDisabledNL,
                     };
-                    jobHandle = _AITrafficDistanceJob.Schedule(carTAA);
+                    //jobHandle = _AITrafficDistanceJob.Schedule(carTAA);
                     jobHandle.Complete();
                     for (int i = 0; i < allWaypointRoutesList.Count; i++)
                     {

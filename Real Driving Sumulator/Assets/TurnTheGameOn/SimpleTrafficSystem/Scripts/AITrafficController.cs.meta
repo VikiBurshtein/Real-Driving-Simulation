@@ -3,7 +3,10 @@ guid: 7c342c37dd3443c68a815fa69ec4a043
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - unassignedBrakeMaterial: {fileID: 2100000, guid: acfce65dffe21b34f922bf65fc07bc05, type: 2}
+  - carParent: {instanceID: 0}
+  - centerPoint: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
