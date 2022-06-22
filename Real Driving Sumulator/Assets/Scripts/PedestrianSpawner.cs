@@ -5,10 +5,11 @@ using UnityEngine;
 public class PedestrianSpawner : MonoBehaviour
 {
     public GameObject pedestrianPrefab;
+    public List<GameObject> spawned = new List<GameObject>();
     public int pedestriansToSpawn;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         StartCoroutine(Spawn());
     }
@@ -26,7 +27,21 @@ public class PedestrianSpawner : MonoBehaviour
             yield return new WaitForEndOfFrame();
 
             count++;
-
+            spawned.Add(obj);
         }
+    }
+
+
+    public void UpdatePedestriansToSpawn(int number)
+    {
+        pedestriansToSpawn = number;
+
+        foreach(var item in spawned)
+        {
+            Destroy(item);
+        }
+
+        spawned = new List<GameObject>();
+
     }
 }
