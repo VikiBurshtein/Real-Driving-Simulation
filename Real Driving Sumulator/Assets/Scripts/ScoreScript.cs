@@ -17,6 +17,7 @@ public class ScoreScript : MonoBehaviour
     public Text TrafficSignGradeText;
     public Text WrongLaneGradeText;
     public Text SpeedLimitGradeText;
+    public Text IgnoredTesterGradeText;
 
     Text score;
 
@@ -29,11 +30,7 @@ public class ScoreScript : MonoBehaviour
         PointsLost.Add("TrafficSign", 0);
         PointsLost.Add("WrongLane", 0);
         PointsLost.Add("SpeedLimit", 0);
-        foreach (var item in PointsLost)
-        {
-            Debug.Log("key: " + item.Key);
-            Debug.Log("value: " + item.Value);
-        }
+        PointsLost.Add("IgnoredTester", 0);
     }
 
     void Update()
@@ -64,6 +61,7 @@ public class ScoreScript : MonoBehaviour
             TrafficSignGradeText.text = PointsLost["TrafficSign"].ToString();
             WrongLaneGradeText.text = PointsLost["WrongLane"].ToString();
             SpeedLimitGradeText.text = PointsLost["SpeedLimit"].ToString();
+            IgnoredTesterGradeText.text = PointsLost["IgnoredTester"].ToString();
         }
     }
 
@@ -77,6 +75,7 @@ public class ScoreScript : MonoBehaviour
         PointsLost.Add("TrafficSign", 0);
         PointsLost.Add("WrongLane", 0);
         PointsLost.Add("SpeedLimit", 0);
+        PointsLost.Add("IgnoredTester", 0);
     }
 
     public Dictionary<string, int> GetDictionary()

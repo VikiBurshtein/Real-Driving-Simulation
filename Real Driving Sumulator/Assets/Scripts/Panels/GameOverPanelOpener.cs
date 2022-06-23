@@ -15,6 +15,7 @@ public class GameOverPanelOpener : MonoBehaviour
     public Text TrafficSignGradeText;
     public Text WrongLaneGradeText;
     public Text SpeedLimitGradeText;
+    public Text IgnoredTesterGradeText;
 
     public void OpenPanel()
     {
@@ -31,6 +32,7 @@ public class GameOverPanelOpener : MonoBehaviour
             TrafficSignGradeText.text = dict["TrafficSign"].ToString();
             WrongLaneGradeText.text = dict["WrongLane"].ToString();
             SpeedLimitGradeText.text = dict["SpeedLimit"].ToString();
+            IgnoredTesterGradeText.text = dict["IgnoredTester"].ToString();
         }
     }
 }

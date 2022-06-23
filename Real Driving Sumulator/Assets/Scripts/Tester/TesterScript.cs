@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class TesterScript : MonoBehaviour
 {
-    public GameObject Panel;
+    public GameObject TesterSaysPanel;
+    public GameObject IgnoredTesterPanel;
+    public ScoreScript ScoreScript;
 
     public void TesterSays()
     {
-        if (!Panel.activeSelf)
+        if (!TesterSaysPanel.activeSelf)
         {
-            Panel.SetActive(true);
+            TesterSaysPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void IgnoredTester()
+    {
+        if (!IgnoredTesterPanel.activeSelf)
+        {
+            ScoreScript.ReduceScore(10, "IgnoredTester");
+            IgnoredTesterPanel.SetActive(true);
             Time.timeScale = 0;
         }
     }
