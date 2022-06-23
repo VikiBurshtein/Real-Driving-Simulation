@@ -24,4 +24,9 @@ public class SettingsPanelOpener : MonoBehaviour
         }
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }

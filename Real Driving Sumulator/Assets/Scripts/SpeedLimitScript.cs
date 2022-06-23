@@ -13,6 +13,7 @@ public class SpeedLimitScript : MonoBehaviour
     private bool lostPoints = false;
     public GameObject Panel;
     public GameObject Score;
+    public ScoreScript ScoreScript;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class SpeedLimitScript : MonoBehaviour
     {
         if (!Panel.activeSelf && !lostPoints)
         {
-            ScoreScript.ReduceScore(5);
+            ScoreScript.ReduceScore(5, "SpeedLimit");
             Panel.SetActive(true);
             Time.timeScale = 0;
         }

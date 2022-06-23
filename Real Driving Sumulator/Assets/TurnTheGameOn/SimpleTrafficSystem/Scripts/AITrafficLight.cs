@@ -19,6 +19,7 @@
         public List<AITrafficWaypointRoute> waypointRoutes;
         public GameObject Panel;
         public GameObject Score;
+        public ScoreScript ScoreScript;
 
 
         public void EnableRedLight()
@@ -61,7 +62,7 @@
         {
             if ((!Panel.activeSelf) && redMesh.enabled)
             {
-                ScoreScript.ReduceScore(10);
+                ScoreScript.ReduceScore(10, "TrafficLight");
                 Panel.SetActive(true);
                 Time.timeScale = 0;
             } 

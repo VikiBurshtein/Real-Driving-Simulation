@@ -13,6 +13,7 @@ public class CarController : MonoBehaviour
     private float currentBreakForce;
     private Rigidbody rigidBody;
     private float speed;
+    public ScoreScript ScoreScript;
 
     [SerializeField] private float motorForce;
     [SerializeField] private float breakForce;
@@ -53,7 +54,13 @@ public class CarController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        ScoreScript.scoreValue -= 1;
+        if(collision.gameObject.CompareTag("Pedestrians"))
+        {
+            ScoreScript.ReduceScore(30, "Pedestrian");
+        } else
+        {
+            ScoreScript.ReduceScore(1, "Random");
+        }
     }
 
     private void HandleMotor()

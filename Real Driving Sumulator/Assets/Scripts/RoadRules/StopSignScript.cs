@@ -6,12 +6,13 @@ public class StopSignScript : MonoBehaviour
 {
     public GameObject Panel;
     public GameObject Score;
+    public ScoreScript ScoreScript;
 
     public void AlertCarDidntStop()
     {
         if (!Panel.activeSelf)
         {
-            ScoreScript.ReduceScore(10);
+            ScoreScript.ReduceScore(10, "TrafficSign");
             Panel.SetActive(true);
             Time.timeScale = 0;
         }

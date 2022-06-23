@@ -11,6 +11,7 @@ public class ResetGame : MonoBehaviour
     public PedestrianSpawner pedestrianSpawner;
     public List<GameObject> Signs;
     public List<GameObject> Lanes;
+    public ScoreScript ScoreScript;
 
     public void SaveAndClosePanel()
     {
