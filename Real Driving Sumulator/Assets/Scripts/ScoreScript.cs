@@ -78,4 +78,14 @@ public class ScoreScript : MonoBehaviour
         PointsLost.Add("WrongLane", 0);
         PointsLost.Add("SpeedLimit", 0);
     }
+
+    public Dictionary<string, int> GetDictionary()
+    {
+        return PointsLost;
+    }
+
+    public int GetScore()
+    {
+        return scoreValue;
+    }
 }
