@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpdateSpeedLimitScript : MonoBehaviour
 {
-    public void UpdateScoreLimit()
+    public void UpdateSpeedLimit()
     {
         {
             if(this.gameObject.name == "SpeedLimitSign20")
@@ -18,7 +18,6 @@ public class UpdateSpeedLimitScript : MonoBehaviour
             {
                 SpeedLimitScript.UpdateSpeedLimit(110);
             }
-
         }
     }
 }
