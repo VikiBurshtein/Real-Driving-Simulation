@@ -9,6 +9,8 @@ public class ResetGame : MonoBehaviour
     private string selectedDifficulty = "Easy";
     private int pedestriansAmount = 0;
     public PedestrianSpawner pedestrianSpawner;
+    public List<GameObject> Signs;
+    public List<GameObject> Lanes;
 
     public void SaveAndClosePanel()
     {
@@ -19,7 +21,7 @@ public class ResetGame : MonoBehaviour
         ScoreScript.ResetScore();
         pedestrianSpawner.UpdatePedestriansToSpawn(pedestriansAmount);
         pedestrianSpawner.Start();
-        //SceneManager.LoadScene("SampleScene");
+
         Time.timeScale = 1;
     }
 
@@ -34,7 +36,32 @@ public class ResetGame : MonoBehaviour
 
     public void updateDifficulty(string difficulty)
     {
-        selectedDifficulty = difficulty;
+        //selectedDifficulty = difficulty;
+        if (difficulty == "Easy")
+        {
+            foreach (var sign in Signs)
+            {
+                sign.SetActive(false);
+            }
+            foreach (var lane in Lanes)
+            {
+                lane.SetActive(false);
+            }
+        } else {
+            foreach(var sign in Signs)
+            {
+                sign.SetActive(true);
+            }
+
+            if (difficulty == "Difficult")
+            {
+                foreach (var lane in Lanes)
+                {
+                    lane.SetActive(true);
+                }
+            }
+                
+        }
     }
 
     public void updatePedestriansAmount(int number)

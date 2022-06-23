@@ -16,5 +16,4 @@ public class NoEntryScript : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-
 }
