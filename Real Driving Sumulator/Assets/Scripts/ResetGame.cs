@@ -11,6 +11,7 @@ public class ResetGame : MonoBehaviour
     public PedestrianSpawner pedestrianSpawner;
     public List<GameObject> Signs;
     public List<GameObject> Lanes;
+    public List<GameObject> TesterDirections;
     public ScoreScript ScoreScript;
 
     public void SaveAndClosePanel()
@@ -48,8 +49,17 @@ public class ResetGame : MonoBehaviour
             {
                 lane.SetActive(false);
             }
+            foreach (var sign in TesterDirections)
+            {
+                sign.SetActive(false);
+            }
         } else {
             foreach(var sign in Signs)
+            {
+                sign.SetActive(true);
+            }
+
+            foreach (var sign in TesterDirections)
             {
                 sign.SetActive(true);
             }
